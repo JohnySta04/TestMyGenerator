@@ -17,6 +17,5 @@ public class Main {
         MyNumGenerator myNumGenerator2 = new MyNumGenerator(10, 20);
         System.out.println(myNumGenerator2.generateDistinct().toString());
         System.out.println("******************************************");
-
     }
 }

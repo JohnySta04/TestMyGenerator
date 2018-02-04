@@ -21,7 +21,6 @@ public class MyNumGenerator {
         while (integerList.size() < this.numOfElm) {
             integerList.add(randomGenerator.nextInt(this.maxNumb));
         }
-
         return integerList;
     }
 
