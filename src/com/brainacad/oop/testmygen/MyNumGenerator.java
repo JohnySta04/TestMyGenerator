@@ -5,8 +5,8 @@ import java.util.Random;
 
 public class MyNumGenerator {
 
-    private int numOfElm = 0;
-    private int maxNumb = 0;
+    private int numOfElm;
+    private int maxNumb;
 
     public MyNumGenerator(int numOfElm, int maxNumb) {
 
@@ -15,13 +15,23 @@ public class MyNumGenerator {
     }
 
     public List<Integer> generate() {
-        List<Integer> integerList = new ArrayList<Integer>();
+        List<Integer> integerList = new ArrayList<>();
         Random randomGenerator = new Random();
 
-        for (int i = 0; i < this.numOfElm; i++) {
+        while (integerList.size() < this.numOfElm) {
             integerList.add(randomGenerator.nextInt(this.maxNumb));
         }
 
         return integerList;
+    }
+
+    public Set<Integer> generateDistinct() {
+        Set<Integer> integerSet = new HashSet<>();
+        Random randomGenerator = new Random();
+
+        while (integerSet.size() < this.numOfElm) {
+            integerSet.add(randomGenerator.nextInt(this.maxNumb));
+        }
+        return integerSet;
     }
 }
